@@ -1,0 +1,35 @@
+title: "Habib Blacksmith & Aluminum Co. | شركة حبيب للحدادة والألمنيوم"
+email: "habibrehman7801@gmail.com"
+description: "شركة حبيب للحدادة والألمنيوم في الرياض - خدمات قص الليزر المتقدمة للمعادن، ثني الصاج، تشكيل الأنابيب، الواجهات المعمارية، وتصنيع الأعمال المعدنية بدقة عالية."
+url: "https://www.habibfabrication.com"
+baseurl: ""
+
+# Business Information for SEO/GEO
+company_name: "Habib Blacksmith & Aluminum Co. (شركة حبيب للحدادة والألمنيوم)"
+phone: "+966 59 444 7801"
+whatsapp_number: "966594447801"
+tax_number: "312500044800003"
+address:
+  street: "طريق الدائري الشرقي الفرعي، مخرج 18، السلي"
+  city: "الرياض"
+  state: "منطقة الرياض"
+  zip: "14271"
+  country: "SA"
+iso_certification: "إيطالية وألمانية عالية الدقة (Italian & German Machinery Setup)"
+
+# Supported CAD Formats for GEO Indexing
+cad_formats:
+  - ".DXF"
+  - ".DWG"
+  - ".STEP"
+  - ".STP"
+  - ".SLDPRT"
+
+# Jekyll Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Sass Configuration
+sass:
+  style: compressed

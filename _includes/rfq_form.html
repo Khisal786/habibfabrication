@@ -1,0 +1,54 @@
+<section id="rfq" class="rfq-section">
+  <div class="container">
+    <div class="rfq-wrapper">
+      <div class="rfq-header">
+        <span class="section-tag">Instant RFQ Generator</span>
+        <h2>Request a B2B Quote & CAD Review</h2>
+        <p>Fill out project specifications below to instantly dispatch your quote request via WhatsApp or direct email.</p>
+      </div>
+      <form id="rfqForm" class="rfq-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="clientName">Full Name / Company Name</label>
+            <input type="text" id="clientName" required placeholder="e.g., Mohammed Al-Qahtani (Riyadh Contracting)">
+          </div>
+          <div class="form-group">
+            <label for="clientEmail">Email Address</label>
+            <input type="email" id="clientEmail" required placeholder="mohammed@riyadhcontracting.sa">
+          </div>
+          <div class="form-group">
+            <label for="clientPhone">Phone Number / WhatsApp</label>
+            <input type="tel" id="clientPhone" required placeholder="+966 5X XXX XXXX">
+          </div>
+          <div class="form-group">
+            <label for="materialSelect">Material & Thickness Range</label>
+            <select id="materialSelect" required>
+              <option value="">Select Material & Grade</option>
+              <option value="Stainless Steel (1mm - 30mm)">Stainless Steel (1mm - 30mm)</option>
+              <option value="Aluminum (1mm - 40mm)">Aluminum (1mm - 40mm)</option>
+              <option value="Iron & Carbon Steel (1mm - 40mm)">Iron & Carbon Steel (1mm - 40mm)</option>
+              <option value="Brass & Copper (Up to 6mm)">Brass & Copper (Up to 6mm)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="thicknessSelect">Exact Thickness (mm)</label>
+            <input type="text" id="thicknessSelect" required placeholder="e.g., 3mm or 10mm">
+          </div>
+          <div class="form-group">
+            <label for="quantityInput">Required Quantity / Sheets</label>
+            <input type="number" id="quantityInput" min="1" value="10" required>
+          </div>
+        </div>
+        <div class="form-group full-width">
+          <label for="projectNotes">Project Specifications & Secondary Services</label>
+          <textarea id="projectNotes" rows="4" placeholder="Specify if you need CNC Bending, Lathe Turning, Argon Welding, or architectural fabrication details (Doors, Facades, Skylights)..."></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary btn-lg btn-whatsapp-dispatch">
+            💬 Send Instant RFQ via WhatsApp
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

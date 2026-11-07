@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="container header-container">
+    <a href="{{ '/' | relative_url }}" class="brand-logo">
+      <span class="logo-apex">HABIB</span> <span class="logo-sub">FABRICATION</span>
+    </a>
+    <nav class="nav-menu">
+      {% for item in site.data.navigation.header %}
+        <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+    <div class="header-cta-group">
+      <!-- Hidden on mobile screens via CSS to prevent crowding -->
+      <a href="#rfq" class="btn btn-primary desktop-cta">{{ site.data.navigation.cta.title }}</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>

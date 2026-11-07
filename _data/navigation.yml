@@ -1,0 +1,40 @@
+topbar:
+  address: "Riyadh, Al-Sulai, Exit 18 (الرياض - السلي - مخرج 18)"
+  iso: "Machinery Setup: Italian & German Systems"
+  phone: "+966 59 444 7801"
+  whatsapp_text: "Instant WhatsApp RFQ"
+
+header:
+  - title: "Capabilities"
+    url: "#capabilities"
+  - title: "Materials Matrix"
+    url: "#materials"
+  - title: "How It Works"
+    url: "#workflow"
+  - title: "FAQ"
+    url: "#faq"
+
+cta:
+  title: "Get Instant Quote"
+  url: "#rfq"
+
+footer:
+  company_bio: "Habib Blacksmith & Aluminum Co. (شركة حبيب للحدادة والألمنيوم) delivers advanced B2B CNC fiber laser cutting, metal turning, CNC press brake forming, and architectural fabrication across Saudi Arabia."
+  quick_links:
+    - title: "Laser Cutting Capabilities"
+      url: "#capabilities"
+    - title: "Material Thickness Guide"
+      url: "#materials"
+    - title: "CAD File Guidelines"
+      url: "#workflow"
+    - title: "Request B2B Quote"
+      url: "#rfq"
+  materials_links:
+    - title: "Stainless Steel (1mm - 30mm)"
+      url: "#materials"
+    - title: "Aluminum Alloys (1mm - 40mm)"
+      url: "#materials"
+    - title: "Steel & Iron Cutting"
+      url: "#materials"
+    - title: "Brass & Copper (Up to 6mm)"
+      url: "#materials"

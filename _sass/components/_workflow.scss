@@ -1,0 +1,42 @@
+.workflow-section {
+  background-color: $bg-canvas;
+
+  .workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    .workflow-card {
+      background: $bg-surface;
+      border: 1px solid $border-color;
+      padding: 2rem;
+      border-radius: 6px;
+
+      .step-badge {
+        display: inline-block;
+        background: rgba($primary-orange, 0.15);
+        color: $primary-orange;
+        font-family: $font-mono;
+        font-weight: 700;
+        padding: 0.25rem 0.65rem;
+        border-radius: 3px;
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+      }
+
+      p {
+        color: $text-muted;
+        font-size: 0.925rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 868px) {
+  .workflow-section .workflow-grid { grid-template-columns: 1fr; }
+}

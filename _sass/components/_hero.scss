@@ -1,0 +1,114 @@
+.hero-video-section {
+  position: relative;
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 4rem 0;
+
+  .hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    .bg-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba($bg-canvas, 0.85) 0%,
+        rgba($bg-canvas, 0.95) 100%
+      );
+    }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba($bg-surface-elevated, 0.8);
+      border: 1px solid $border-light;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      color: $accent-cyan;
+      margin-bottom: 1.5rem;
+
+      .pill-divider { color: $text-subtle; }
+    }
+
+    h1 {
+      font-size: 3.25rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      span { color: $primary-orange; }
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: $text-muted;
+      margin-bottom: 2rem;
+      max-width: 720px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .hero-specs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      border-top: 1px solid $border-color;
+      padding-top: 2rem;
+
+      .spec-card {
+        background: rgba($bg-surface, 0.6);
+        border: 1px solid $border-color;
+        padding: 1rem;
+        border-radius: 4px;
+        .spec-value {
+          display: block;
+          font-size: 1.35rem;
+          font-weight: 700;
+          color: $accent-cyan;
+          font-family: $font-mono;
+        }
+        .spec-label {
+          font-size: 0.8rem;
+          color: $text-muted;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-video-section {
+    .hero-content {
+      h1 { font-size: 2.25rem; }
+      .hero-specs-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-actions { flex-direction: column; }
+    }
+  }
+}

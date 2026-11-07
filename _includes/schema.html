@@ -1,0 +1,65 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ManufacturingBusiness",
+  "name": "{{ site.company_name }}",
+  "image": "{{ site.url }}{{ site.baseurl }}/assets/images/logo.jpg",
+  "@id": "{{ site.url }}{{ site.baseurl }}",
+  "url": "{{ site.url }}{{ site.baseurl }}",
+  "telephone": "{{ site.phone }}",
+  "taxID": "{{ site.tax_number }}",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.address.street }}",
+    "addressLocality": "{{ site.address.city }}",
+    "addressRegion": "{{ site.address.state }}",
+    "postalCode": "{{ site.address.zip }}",
+    "addressCountry": "{{ site.address.country }}"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 24.6584,
+    "longitude": 46.8349
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Saturday",
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "opens": "07:00",
+    "closes": "18:00"
+  },
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Precision Fiber Laser Cutting",
+        "description": "High-accuracy laser cutting and engraving for Stainless Steel (up to 30mm), Aluminum (up to 40mm), and Brass/Copper with 3m and 6m bed support."
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "CNC Press Brake Bending & Forming",
+        "description": "Hydraulic sheet metal bending, structural angle forming, column shaping, and custom metal profile manufacturing."
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Architectural Fabrication & Welding",
+        "description": "Custom doors, laser-cut decorative gates, handrails, building facades, curtain walls, cladding, and skylight spider systems."
+      }
+    }
+  ]
+}
+</script>

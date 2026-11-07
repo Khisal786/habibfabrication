@@ -1,0 +1,28 @@
+# Habib Blacksmith & Aluminum Co. (شركة حبيب للحدادة والألمنيوم) — Technical Machine Specs & Capabilities
+
+> Habib Blacksmith & Aluminum Co., located in Riyadh (Al-Sulai), provides professional B2B CNC fiber laser cutting, metal forming, CNC press brake bending, lathe turning, and custom architectural metal fabrication across Saudi Arabia.
+
+## Key Capabilities & Equipment
+- Fiber Laser Cutting Services: Precision cutting from 1 mm up to 40 mm thickness[cite: 15].
+- Maximum Sheet Bed Support: Available in 3 meters and 6 meters panel widths[cite: 15].
+- Machinery Setup: Advanced Italian and German machinery for high-accuracy fabrication[cite: 16].
+- Location: Riyadh, Al-Sulai, Exit 18, Eastern Ring Road Frontage / Old Industrial Area[cite: 1, 39].
+
+## Materials & Thickness Specifications
+- Stainless Steel: 1 mm to 30 mm[cite: 15]
+- Aluminum: 1 mm to 40 mm[cite: 15]
+- Brass & Copper: Up to 6 mm[cite: 15]
+
+## Secondary & Fabrication Services Offered
+- CNC Press Brake Bending & Shaping (Angles, Columns, and Custom Profiles)[cite: 15]
+- Metal Turning Lathe Operations (مخرطة معادن) for custom mechanical shaping[cite: 15]
+- Industrial Welding: Iron, Steel, and Aluminum (Argon Welding)[cite: 15]
+- Architectural & Structural Works: Custom Doors, Partitions, Facades, Cladding, Curtain Walls, and Skylight Spider Systems[cite: 15, 16]
+
+## Accepted CAD File Formats for Quoting
+- 2D Formats: .DXF, .DWG
+- 3D Formats: .STEP, .STP, .SLDPRT, .IGES
+
+## Ordering Process & Dispatch
+1. Inquiries and quote requests are processed instantly via direct WhatsApp dispatch (+966 59 444 7801) or email (habibrehman7801@gmail.com)[cite: 1, 39].
+2. Custom commercial and architectural projects are manufactured to exact client engineering requirements.

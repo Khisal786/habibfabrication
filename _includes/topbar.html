@@ -1,0 +1,25 @@
+<div class="topbar">
+  <div class="container topbar-container">
+    <!-- Desktop Left Info (Hidden on Mobile via CSS) -->
+    <div class="topbar-left">
+      <span class="topbar-item">📍 {{ site.data.navigation.topbar.address }}</span>
+      <span class="topbar-divider">|</span>
+      <span class="topbar-item highlight-iso">⚡ {{ site.data.navigation.topbar.iso }}</span>
+    </div>
+
+    <!-- Desktop Right Info (Hidden on Mobile via CSS) -->
+    <div class="topbar-right desktop-only">
+      <a href="tel:{{ site.data.navigation.topbar.phone }}" class="topbar-phone">📞 {{ site.data.navigation.topbar.phone }}</a>
+      <a href="https://wa.me/{{ site.whatsapp_number }}?text=Hello%20Habib%20Blacksmith%20and%20Aluminum,%20I%20would%20like%20to%20request%20an%20instant%20quote%20for%20laser%20cutting." target="_blank" rel="noopener" class="topbar-whatsapp-btn">
+        💬 {{ site.data.navigation.topbar.whatsapp_text }}
+      </a>
+    </div>
+
+    <!-- Mobile-Only Action Bar (Sgriee Style: WhatsApp Direct Link) -->
+    <div class="topbar-mobile-only">
+      <a href="https://wa.me/{{ site.whatsapp_number }}?text=Hello%20Habib%20Blacksmith%20and%20Aluminum,%20I%20would%20like%20to%20request%20an%20instant%20quote." target="_blank" rel="noopener" class="mobile-whatsapp-link">
+        WhatsApp +966 59 444 7801
+      </a>
+    </div>
+  </div>
+</div>

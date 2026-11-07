@@ -1,0 +1,66 @@
+<section id="materials" class="material-matrix-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Material Database</span>
+      <h2>Certified Metal & Thickness Matrix</h2>
+      <p>Explore our stock material grades, maximum cutting limits, and assist gas configurations optimized for clean, burr-free edges.</p>
+    </div>
+    
+    <div class="material-tabs">
+      {% for mat in site.data.materials %}
+        <button class="mat-tab-btn {% if forloop.first %}active{% endif %}" data-target="{{ mat.id }}">
+          {{ mat.name }}
+        </button>
+      {% endfor %}
+    </div>
+
+    <div class="material-content-container">
+      {% for mat in site.data.materials %}
+        <div class="mat-pane {% if forloop.first %}active{% endif %}" id="{{ mat.id }}">
+          <div class="mat-card-grid">
+            <div class="mat-info-col">
+              <div class="mat-badge" style="background-color: {{ mat.badge_color }}20; color: {{ mat.badge_color }};">
+                {{ mat.badge }}
+              </div>
+              <h3>{{ mat.name }}</h3>
+              <p class="mat-grades"><strong>Grades:</strong> {{ mat.grades }}</p>
+              <p class="mat-desc">{{ mat.best_for }}</p>
+              <div class="mat-specs-list">
+                <div class="spec-row">
+                  <span>Max Thickness:</span>
+                  <strong>{{ mat.max_thickness }}</strong>
+                </div>
+                <div class="spec-row">
+                  <span>Min Thickness:</span>
+                  <strong>{{ mat.min_thickness }}</strong>
+                </div>
+                <div class="spec-row">
+                  <span>Assist Gas:</span>
+                  <strong>{{ mat.assist_gas }}</strong>
+                </div>
+                <div class="spec-row">
+                  <span>Finishing:</span>
+                  <strong>{{ mat.finish_options }}</strong>
+                </div>
+              </div>
+              <a href="#rfq" class="btn btn-primary mt-4 select-material-btn" data-material="{{ mat.name }}">
+                Get Quote for {{ mat.name }}
+              </a>
+            </div>
+            <div class="mat-visual-col">
+              <div class="industrial-spec-box">
+                <span class="box-tag">Laser Cutting Parameter Profile</span>
+                <h4>Engineering Standard</h4>
+                <ul>
+                  <li>✓ 100% Nitrogen high-pressure assist available for oxide-free weldable edges.</li>
+                  <li>✓ Automated kerf compensation for precise hole-to-diameter ratios.</li>
+                  <li>✓ Direct import of .DXF and .STEP files with automated geometry verification.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

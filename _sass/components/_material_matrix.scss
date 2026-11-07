@@ -1,0 +1,117 @@
+.material-matrix-section {
+  background-color: $bg-canvas;
+
+  .material-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+
+    .mat-tab-btn {
+      background: $bg-surface;
+      border: 1px solid $border-color;
+      color: $text-muted;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover, &.active {
+        background: $bg-surface-elevated;
+        border-color: $primary-orange;
+        color: $text-main;
+      }
+    }
+  }
+
+  .mat-pane {
+    display: none;
+    &.active { display: block; }
+  }
+
+  .mat-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background: $bg-surface;
+    border: 1px solid $border-color;
+    padding: 2.5rem;
+    border-radius: 8px;
+
+    .mat-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 3px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .mat-grades {
+      color: $accent-cyan;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .mat-desc {
+      color: $text-muted;
+      margin-bottom: 1.5rem;
+    }
+
+    .mat-specs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      border-top: 1px solid $border-color;
+      padding-top: 1rem;
+
+      .spec-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        span { color: $text-muted; }
+        strong { color: $text-main; }
+      }
+    }
+
+    .industrial-spec-box {
+      background: $bg-surface-elevated;
+      border: 1px dashed $border-light;
+      padding: 1.75rem;
+      border-radius: 6px;
+
+      .box-tag {
+        color: $primary-orange;
+        font-family: $font-mono;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+      }
+
+      h4 {
+        margin: 0.5rem 0 1rem 0;
+        font-size: 1.2rem;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+        li {
+          color: $text-muted;
+          font-size: 0.925rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 868px) {
+  .material-matrix-section .mat-card-grid { grid-template-columns: 1fr; }
+}

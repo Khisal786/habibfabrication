@@ -1,0 +1,28 @@
+<section id="capabilities" class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Core Capabilities</span>
+      <h2>End-to-End Sheet Metal Fabrication</h2>
+      <p>From high-power fiber laser profiling to hydraulic press brake forming and vibratory deburring.</p>
+    </div>
+    <div class="services-grid">
+      {% for srv in site.data.services %}
+        <div class="service-card">
+          <div class="service-icon-wrap">
+            <span class="service-num">0{{ forloop.index }}</span>
+          </div>
+          <h3>{{ srv.title }}</h3>
+          <p>{{ srv.summary }}</p>
+          <ul class="service-specs-list">
+            {% for spec in srv.specs %}
+              <li>
+                <span class="spec-name">{{ spec.label }}:</span>
+                <span class="spec-val">{{ spec.value }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

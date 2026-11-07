@@ -1,0 +1,23 @@
+.floating-cta {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+
+  .floating-whatsapp-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: $whatsapp-green;
+    color: #000000;
+    font-weight: 700;
+    padding: 0.85rem 1.35rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
