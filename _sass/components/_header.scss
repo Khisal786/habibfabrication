@@ -1,6 +1,7 @@
 .site-header {
   position: sticky;
-  top: $topbar-height;
+  top: flex;
+  top: ($topbar-height + 34px);
   z-index: 1000;
   background-color: rgba($bg-canvas, 0.92);
   backdrop-filter: blur(10px);
@@ -58,7 +59,7 @@
 
 @media (max-width: 868px) {
   .site-header {
-    top: 33px; /* Smooth offset below sticky mobile topbar */
+    top: 58px;
 
     .nav-menu { 
       display: none; 
@@ -70,7 +71,7 @@
 
     .header-cta-group {
       .desktop-cta {
-        display: none !important; /* Removes 'Get Instant Quote' on mobile */
+        display: none !important;
       }
     }
   }
