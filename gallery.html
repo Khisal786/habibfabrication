@@ -1,0 +1,75 @@
+---
+layout: default
+title: "Project & Machinery Gallery | Habib Blacksmith & Aluminum Co."
+description: "Browse our fabrication gallery: CNC fiber laser machinery, laser-cut gates, pergolas, aluminum cladding, skylights, and glass partitions."
+permalink: /gallery/
+---
+
+{% assign showcase = site.data.portfolio_categories %}
+
+<section class="gallery-page">
+  <div class="container gallery-page__container">
+    <header class="gallery-page__header">
+      <a href="{{ '/' | relative_url }}" class="gallery-page__back">← Back to Home</a>
+      <h1 class="gallery-page__title">Our Work &amp; Machinery Gallery</h1>
+      <p class="gallery-page__subtitle">
+        Selected fabrication projects, architectural metalwork, and CNC machinery from our Riyadh workshops.
+      </p>
+
+      {% if showcase and showcase.categories %}
+      <nav class="gallery-filter-bar" aria-label="Jump to gallery category">
+        {% for cat in showcase.categories %}
+          <a href="#{{ cat.slug }}" class="gallery-filter-bar__pill">{{ cat.title }}</a>
+        {% endfor %}
+      </nav>
+      {% endif %}
+    </header>
+
+    {% if showcase and showcase.categories %}
+      {% for cat in showcase.categories %}
+        <section id="{{ cat.slug }}" class="gallery-section" aria-labelledby="heading-{{ cat.slug }}">
+          <div class="gallery-section__head">
+            <h2 id="heading-{{ cat.slug }}" class="gallery-section__title">{{ cat.title }}</h2>
+          </div>
+
+          <div class="gallery-grid">
+            {% for item in cat.items %}
+              <figure class="gallery-item">
+                <div class="gallery-item__media">
+                  <img
+                    src="{{ item.src | relative_url }}"
+                    alt="{{ item.caption | default: cat.title }}"
+                    class="gallery-item__img"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                {% if item.caption %}
+                  <figcaption class="gallery-item__caption">{{ item.caption }}</figcaption>
+                {% endif %}
+              </figure>
+            {% endfor %}
+          </div>
+        </section>
+      {% endfor %}
+    {% endif %}
+
+    <aside class="gallery-cta-box">
+      <h2 class="gallery-cta-box__title">Need Custom Laser Cutting or Metal Fabrication?</h2>
+      <p class="gallery-cta-box__text">Send your drawings or dimensions for a fast workshop estimate.</p>
+      <div class="gallery-cta-box__actions">
+        <a href="{{ '/#rfq' | relative_url }}" class="gallery-cta-box__btn gallery-cta-box__btn--primary">
+          Request Instant Quote
+        </a>
+        <a
+          href="https://wa.me/{{ site.whatsapp_number }}?text=Hello%20Habib%20Blacksmith%20and%20Aluminum,%20I%20saw%20your%20gallery%20and%20would%20like%20a%20quote."
+          target="_blank"
+          rel="noopener"
+          class="gallery-cta-box__btn gallery-cta-box__btn--whatsapp"
+        >
+          💬 WhatsApp Us
+        </a>
+      </div>
+    </aside>
+  </div>
+</section>
