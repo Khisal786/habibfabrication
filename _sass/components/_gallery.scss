@@ -1,0 +1,232 @@
+.gallery-page {
+  padding: 2rem 0 3.5rem;
+  background-color: $bg-canvas;
+  width: 100%;
+  overflow-x: clip;
+
+  &__container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__back {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: $accent-cyan;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary-orange;
+    }
+  }
+
+  &__title {
+    margin: 0 0 0.5rem;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 800;
+    color: $text-main;
+  }
+
+  &__subtitle {
+    margin: 0 0 1.25rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: $text-muted;
+  }
+}
+
+/* Mobile-first horizontal swipeable pill bar */
+.gallery-filter-bar {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.4rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__pill {
+    flex-shrink: 0;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    background-color: #12161b;
+    border: 1px solid $border-color;
+    color: $text-main;
+    font-size: 0.825rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: border-color 0.2s ease, color 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      border-color: $primary-orange;
+      color: $primary-orange;
+    }
+  }
+}
+
+.gallery-section {
+  margin-bottom: 2.75rem;
+  /* Ensures anchor jumps clear the 2 sticky topbars + sticky header on mobile */
+  scroll-margin-top: 135px;
+
+  &__head {
+    margin-bottom: 1rem;
+    padding-left: 0.75rem;
+    border-left: 3px solid $primary-orange;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $text-main;
+  }
+}
+
+/* Mobile-first: 1 column */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.gallery-item {
+  margin: 0;
+  background-color: #12161b;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  overflow: hidden;
+
+  &__media {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background-color: #0b0e11;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.25s ease;
+  }
+
+  &:hover &__img {
+    transform: scale(1.03);
+  }
+
+  &__caption {
+    padding: 0.75rem 0.9rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $text-muted;
+    border-top: 1px solid rgba($border-color, 0.6);
+  }
+}
+
+.gallery-cta-box {
+  margin-top: 2.5rem;
+  padding: 1.5rem 1.25rem;
+  background-color: #12161b;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  text-align: center;
+
+  &__title {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+    color: $text-main;
+  }
+
+  &__text {
+    margin: 0 0 1.25rem;
+    font-size: 0.925rem;
+    color: $text-muted;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+
+    &--primary {
+      background-color: $primary-orange;
+      color: #0b0e11;
+    }
+
+    &--whatsapp {
+      background-color: rgba($whatsapp-green, 0.15);
+      border: 1px solid rgba($whatsapp-green, 0.35);
+      color: $whatsapp-green;
+    }
+  }
+}
+
+/* Tablet and up */
+@media (min-width: 640px) {
+  .gallery-page {
+    padding: 2.75rem 0 4rem;
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+
+  .gallery-filter-bar {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .gallery-cta-box {
+    padding: 2rem;
+
+    &__actions {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+  .gallery-section {
+    scroll-margin-top: 155px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
