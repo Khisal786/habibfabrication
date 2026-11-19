@@ -1,0 +1,44 @@
+{% assign showcase = site.data.portfolio_categories %}
+{% if showcase and showcase.categories %}
+<section id="work-categories" class="portfolio-showcase" aria-labelledby="portfolio-showcase-heading">
+  <div class="container portfolio-showcase__container">
+    <header class="portfolio-showcase__header">
+      <h2 id="portfolio-showcase-heading" class="portfolio-showcase__title">
+        {{ showcase.section_title }}
+      </h2>
+      {% if showcase.section_subtitle %}
+        <p class="portfolio-showcase__subtitle">{{ showcase.section_subtitle }}</p>
+      {% endif %}
+    </header>
+
+    <div class="portfolio-showcase__grid">
+      {% for cat in showcase.categories %}
+        <a
+          href="{{ showcase.gallery_url | relative_url }}#{{ cat.slug }}"
+          class="portfolio-card"
+        >
+          <div class="portfolio-card__media">
+            <img
+              src="{{ cat.image | relative_url }}"
+              alt="{{ cat.alt | default: cat.title }}"
+              class="portfolio-card__img"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="portfolio-card__body">
+            <h3 class="portfolio-card__title">{{ cat.title }}</h3>
+            <span class="portfolio-card__action" aria-hidden="true">See category →</span>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+
+    <div class="portfolio-showcase__footer">
+      <a href="{{ showcase.gallery_url | relative_url }}" class="portfolio-showcase__cta">
+        {{ showcase.gallery_cta | default: "Browse All Photos" }}
+      </a>
+    </div>
+  </div>
+</section>
+{% endif %}
