@@ -1,0 +1,30 @@
+section_title: "Our Fabrication & Work Categories"
+section_subtitle: "Explore key work groups from our company profile—tap any category to view more in the full gallery."
+gallery_url: "/gallery/"
+gallery_cta: "View Full Gallery"
+
+categories:
+  - title: "Industrial & CNC Machinery"
+    slug: "machinery"
+    image: "/assets/images/gallery/machinery.jpg"
+    alt: "Fiber laser cutting, bending, and rolling machinery at Habib Fabrication"
+
+  - title: "Doors, Gates & Railings"
+    slug: "doors-gates-railings"
+    image: "/assets/images/gallery/doors-gates.jpg"
+    alt: "Laser-cut metal gates, decorative doors, and stair railings"
+
+  - title: "Balconies, Pergolas & Canopies"
+    slug: "pergolas-canopies"
+    image: "/assets/images/gallery/pergolas-canopies.jpg"
+    alt: "Architectural pergolas, overhead canopies, and balcony railings"
+
+  - title: "Facades, Cladding & Skylights"
+    slug: "facades-cladding"
+    image: "/assets/images/gallery/facades-cladding.jpg"
+    alt: "Aluminum cladding, glass facades, and skylight structures"
+
+  - title: "Partitions & Windows"
+    slug: "partitions-windows"
+    image: "/assets/images/gallery/partitions-windows.jpg"
+    alt: "Interior glass partitions, sliding windows, and decorative screens"
