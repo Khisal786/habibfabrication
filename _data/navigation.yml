@@ -9,6 +9,8 @@ header:
     url: "#capabilities"
   - title: "Materials Matrix"
     url: "#materials"
+  - title: "Gallery" 
+    url: "#gallery"
   - title: "How It Works"
     url: "#workflow"
   - title: "FAQ"
